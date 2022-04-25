@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Patrate magice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Atestat/style.css" />
+</head>
+
+<body>
+<nav id="navbar">
+    <header>Patrate magice</header>
+    <ul>
+      <li><a class="nav-link" href="#introduction">Introducere</a></li>
+      <li><a class="nav-link" href="#istoric">Istoric</a></li>
+      <li><a class="nav-link" href="#impar1">Pătrate magice de ordin impar I</a></li>
+      <li><a class="nav-link" href="#impar2">Pătrate magice de ordin impar II</a></li>
+      <li><a class="nav-link" href="#patrat_4n">Pătrate magice de ordin 4*n</a></li>
+      <li><a class="nav-link" href="#patrat_4n+2">Pătrate magice de ordin 4*n+2</a></li>
+      </li>
+      <li><a class="nav-link" href="#Reference">Bibliografie</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+
+    <div class="header" align="center">
+      <h1>
+        Colegiul Național de Informatică
+        <br>Piatra Neamț
+        <br>Proiect pentru atestarea competențelor profesionale in informatică
+          <br>Pătrate magice        
+          <br>-prezentare și metode de construcție-
+      </h1>
+      <div id="elev">
+        
+      <h3>
+        Profesor coordonator: <br>Ene Dumitru
+      </h3>
+      <h3>
+        Elev: Macovei Teodor-Andrei<br>Clasa a XII-a F
+      </h3>
+    </div>
+    </div>
+
+    <div class="main-section" id="introduction">
+      <header>Introducere</header>
+      <article>
+        <p>
+          În matematica recreationala, o matrice pătrată de numere, de obicei numere întregi pozitive, 
+          se numește pătrat magic dacă sumele numerelor din fiecare rând, fiecare coloană și ambele diagonale principale 
+          sunt aceleași. Ordinea pătratului magic este numărul de numere întregi de-a lungul unei laturi n, iar suma 
+          constantă se numește constantă magică(notata cu "M"). Dacă tabloul include doar numerele întregi pozitive 
+          <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/887eb3a03b3a8a0b8ba6b076593fdf802bbdf3ae" 
+          class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:10.978ex; height:3.009ex;" 
+          alt="{\displaystyle 1,2,...,n^{2}}">,
+           se spune că pătratul magic este normal.
+        
+           <br><br>
+        Studiul matematic al pătratelor magice se ocupă de obicei de construcția, 
+        clasificarea și enumerarea lor. Deși nu există metode complet generale de 
+        producere a tuturor pătratelor magice de toate ordinele, din punct de vedere istoric 
+        s-au descoperit cateva tehnici generale : metoda la Loubre(numita uzual metoda siameza) si 
+        metoda rombului pentru patratele de ordin impar, metoda LUX pentru patrate de ordinul 4n+2 sau metoda "doubly even"(dublu par) pentru patrate de ordinul 4n.
+      </p>
+      </article>
+    </div>
+
+    <div class="main-section" id="istoric">
+      <header>Patrate magice de-a lungul istoriei</header>
+      <article>
+        <p>
+          În China antică, se cunoșteau pătratele magice încă din Mileniul al III-lea î.Hr., 
+          după cum atestă Lo Shu. După legendă, într-o bună zi se revărsă un râu; oamenii, 
+          înfricoșați, încercară să aducă o ofrandă zeilor râului Lo (unul dintre cele revărsate) 
+          pentru a-i calma furia. Totuși, de fiecare dată când făceau aceasta, apărea o broască 
+          țestoasă care încercuia ofrandele fără să le accepte, până când un băiat își dădu seama 
+          de marcajele speciale de pe carapacea ei și așa putură să ofere cantitatea cerută (15), 
+          și să mulțumească zeul, care readuse apele la nivelul lor. Au cunoscut și combinații de 
+          această clasă indienii, arabii, egiptenii și grecii. La pătrate asemănătoare, diferitele 
+          culturi au atribuit proprietăți astrologice și divinatorii variate, fiind de numeroase 
+          ori marcate în talismane. Așa cum reia Cornelius Agrippa în "Despre filozofia ocultă III" (1533), 
+          pătratul de ordinul trei(M=15) era consacrat zeului Saturn, cel de patru(M=34) lui Jupiter, 
+          cel de cinci(M=65) lui Marte, cel de șase(M=111) Soare, cel de șapte(M=175) lui Venus, 
+          cel de opt(M=260) lui Mercur și cel de nouă(M=369) Lunei;
+           o atribuție similară se poate găsi în astrologia hindusă.
+           
+          <br><br>Introducerea pătratelor magice în occident se poate atribui lui Emanuel Moschopoulos, 
+           în jurul secolului al XVI-lea, autorul unui manuscris în care pentru prima oară au fost 
+           explicate câteva metode pentru a le construi. Mai târziu, studiul proprietăților acestor 
+           pătrate a atras atenția unor mari matematicieni, care au dedicat subiectului câteva opere 
+           chiar cu toată inutilitatea practică a pătratelor magice. Printre ei se pot cita Stifel, 
+           Fermat, Pascal, Leibnitz, Frénicle de Bessy, Bachet de Méziriac, La Hire, Saurin, 
+           Euler, ... se poate zice că nici un matematician nu a putut rezista farmecelor pătratului magic.
+           <br><br>De asemenea, pătratele magice și-au făcut apariția și în artă înca din secolul al XVI-lea :<br>
+           - Pătratul magic(de ordin 4) al lui Albrecht Dürer, sculptat în opera sa Melancolía(1514) este considerat primul din artele europene,
+           <br>- Fațada Patimilor a bisericii Sagrada Família în Barcelona, concepută de sculptorul 
+           Josep Subirachs arată un pătrat magic de ordinea 4:
+           Constanta magică a pătratului este 33, vârsta lui Iisus Cristos în timpul Patimilor. 
+           Structural, este forte asemănătoare pătratului magic din Melancolia, dar două numere 
+           din pătrat, (12 și 16) sunt reduse cu două unități (10 și 14) iar de aceea apar repetiții. 
+           Aceasta permite să se reducă constanta magică cu 1.
+        </p>
+        <div id="photos">
+        <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Albrecht_D%C3%9CRer_-_Melencolia_I_-_Google_Art_Project.jpg/330px-Albrecht_D%C3%9CRer_-_Melencolia_I_-_Google_Art_Project.jpg" 
+         width="220" height="280" class="thumbimage">
+         <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ms_sf_2.jpg/330px-Ms_sf_2.jpg"
+         width="220" height="280" class="thumbimage">
+        </div>
+        <div id="ph_text">
+          <p>Melancolia de Albrecht Dürer</p>
+          <p>Pătratul magic din Sagrada Familia</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="main-section" id="patrat_impar">
+      <header>Construcția pătratului de ordin impar</header>
+
+      <div id="impar1">
+        <article>
+          <h1>Patrate magice de ordin impar - metoda I</h1>
+          <p>Aceste pătrate pot fi generate cu metoda publicată în 1691 de Simon de la Loubere, 
+            numită câteodată metoda siameză, metodă cunoscută de astrologii orientali. Începând 
+            în căsuța centrală a primului rând cu primul număr, umplem diagonala ruptă cu următoarele, 
+            în sens NV (sau NE). Odată umplută prima diagonală, este coborâtă de o poziție și se umple 
+            a doua în același sens ca și prima, apoi repetând pașii anteriori până se termină pătratul.
+          </p>
+          <img src="https://upload.wikimedia.org/wikipedia/ro/3/3b/P%C4%83trat_Magic_Impar.png">
+          <p><strong><br>Metoda siameza poate fi transpusă astfel în cod :</strong></p>
+          <pre>
+#include &lt;iostream&gt;
+using namespace std;
+int n,nr,a[101][101];
+int main()
+{   cin>>n;
+    for(int i=0,j=n/2+1,d=1;d&lt;=n;d++)
+    {   a[++i][j]=++nr;
+        for(int k=1;k&lt;n;k++)
+        {   i--;
+            if(i==0) i=n;
+            j++;
+            if(j==n+1) j=1;
+            a[i][j]=++nr;
+        }
+    }
+    for(int i=1;i&lt;=n;i++)
+    {   for(int j=1;j&lt;=n;j++) cout&lt;&lt;a[i][j]&lt;&lt;' ';
+        cout&lt;&lt;'\n';
+    }
+    return 0;
+} 
+          </pre>
+          <ul>
+            <li>
+              Se pornește din celula din mijloc a laturii de sus, pe direcția NE
+            </li>
+            <li>
+              Cand se ajunge pe prima linie/coloana, următoarea valoare marcată 
+              va fi pe aceeași direcție, dar pe ultima linie/prima coloana
+            </li>
+            <li>
+              Cand pe direcția aleasă se gaseste o celula care este deja populată, se coboara o linie si se continuă algoritmul
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div id="impar2">
+        <article>
+          <h1>Patrate magice de ordin impar - metoda II</h1>
+          <p><strong>Pasul întâi:</strong> Se scriu numerele de la 1 la n². Se scrie 1 în căsuţa superioară a rombului şi se urmează în formă oblică ca şi în exemplul de mai jos. Pătratul magic va fi unul înscris în rombul format.</p>
+          <table border="0">
+
+            <tbody><tr>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em" bgcolor="#ccffff">1
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#ccffff">6
+            </td>
+            <td align="center" bgcolor="#ccffff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#ccffff">2
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">11
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">7
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">3
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#3399ff">16
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">12
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">8
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00FFFF">4
+            </td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center" bgcolor="#3399ff">21
+            </td>
+            <td align="center" bgcolor="#3399ff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">17
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">13
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">9
+            </td>
+            <td align="center" bgcolor="#00FFFF">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00FFFF">&nbsp;5&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#3399ff">22
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">18
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">14
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00FFFF">10
+            </td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">23
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">19
+            </td>
+            <td align="center" bgcolor="#66ccff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">15
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00ffcc">24
+            </td>
+            <td align="center" bgcolor="#00ffcc">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00ffcc">20
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00ffcc">25
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td></tr></tbody></table>
+          <br><br>
+          <p><strong>Pasul al doilea : </strong>Transferăm numerele din colţurile rombului în căsuţele goale în partea opusă a rombului.</p>
+          <table border="0">
+
+            <tbody><tr>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em" bgcolor="#ccffff">1
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td>
+            <td align="center" style="width:1.5em">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#ccffff">6
+            </td>
+            <td align="center" bgcolor="#ccffff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#ccffff">2
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">11
+            </td>
+            <td align="center" bgcolor="#00ffcc">24
+            </td>
+            <td align="center" bgcolor="#66ccff">7
+            </td>
+            <td align="center" bgcolor="#00ffcc">20
+            </td>
+            <td align="center" bgcolor="#66ccff">3
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#3399ff">16
+            </td>
+            <td align="center" bgcolor="#00FFFF">4
+            </td>
+            <td align="center" bgcolor="#66ccff">12
+            </td>
+            <td align="center" bgcolor="#00ffcc">25
+            </td>
+            <td align="center" bgcolor="#66ccff">8
+            </td>
+            <td align="center" bgcolor="#3399ff">16
+            </td>
+            <td align="center" bgcolor="#00FFFF">4
+            </td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center" bgcolor="#3399ff">21
+            </td>
+            <td align="center" bgcolor="#3399ff">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">17
+            </td>
+            <td align="center" bgcolor="#00FFFF">5
+            </td>
+            <td align="center" bgcolor="#66ccff">13
+            </td>
+            <td align="center" bgcolor="#3399ff">21
+            </td>
+            <td align="center" bgcolor="#66ccff">9
+            </td>
+            <td align="center" bgcolor="#00FFFF">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00FFFF">&nbsp;5&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#3399ff">22
+            </td>
+            <td align="center" bgcolor="#00FFFF">10
+            </td>
+            <td align="center" bgcolor="#66ccff">18
+            </td>
+            <td align="center" bgcolor="#ccffff">1
+            </td>
+            <td align="center" bgcolor="#66ccff">14
+            </td>
+            <td align="center" bgcolor="#3399ff">22
+            </td>
+            <td align="center" bgcolor="#00FFFF">10
+            </td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#66ccff">23
+            </td>
+            <td align="center" bgcolor="#ccffff">6
+            </td>
+            <td align="center" bgcolor="#66ccff">19
+            </td>
+            <td align="center" bgcolor="#ccffff">2
+            </td>
+            <td align="center" bgcolor="#66ccff">15
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00ffcc">24
+            </td>
+            <td align="center" bgcolor="#00ffcc">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00ffcc">20
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;
+            </td></tr>
+            <tr>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center" bgcolor="#00ffcc">25
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center">&nbsp;</td>
+            <td align="center">&nbsp;
+            </td></tr></tbody></table>
+            <br><br>
+            <p><strong>Pasul al treilea : </strong>Scoatem colţurile rombului: acum avem un pătrat magic de ordin impar.</p>
+            <table border="0">
+
+              <tbody><tr bgcolor="#99ffff" align="center">
+              <td style="width:1.5em">11</td>
+              <td style="width:1.5em">24
+              </td>
+              <td style="width:1.5em">7
+              </td>
+              <td style="width:1.5em">20</td>
+              <td style="width:1.5em">3
+              </td></tr>
+              <tr bgcolor="#99ffff" align="center">
+              <td>4</td>
+              <td>12</td>
+              <td>25</td>
+              <td>8</td>
+              <td>16
+              </td></tr>
+              <tr bgcolor="#99ffff" align="center">
+              <td>17</td>
+              <td>5</td>
+              <td>13</td>
+              <td>21</td>
+              <td>9
+              </td></tr>
+              <tr bgcolor="#99ffff" align="center">
+              <td>10</td>
+              <td>18</td>
+              <td>1</td>
+              <td>14</td>
+              <td>22
+              </td></tr>
+              <tr bgcolor="#99ffff" align="center">
+              <td>23</td>
+              <td>6</td>
+              <td>19</td>
+              <td>2</td>
+              <td>15
+              </td></tr></tbody></table>
+              <br>
+        </article>
+      </div>
+
+    </div>
+
+    <div class="main-section" id="patrat_4n">
+      <header>Construcția pătratului de ordin 4*n</header>
+      <article>
+        <p><strong>Model generic</strong>Toate numerele sunt scrise în ordine de la stânga la dreapta
+           pe fiecare rând pe rând, începând din colțul din stânga sus. Numerele sunt 
+           apoi reținute în același loc sau schimbate cu numerele lor diametral opuse 
+           într-un anumit model regulat. În pătratul magic de ordinul patru, numerele 
+           din cele patru pătrate centrale și câte un pătrat la fiecare colț sunt reținute 
+           în același loc, iar celelalte sunt schimbate cu numerele lor diametral opuse.
+          <br><br>
+          O construcție a unui pătrat magic de ordinul 4 Începând din stânga sus, mergeți de 
+          la stânga la dreapta prin fiecare rând al pătratului, numărând fiecare celulă de la 
+          1 la 16 și umplând celulele de-a lungul diagonalelor cu numărul corespunzător. Odată 
+          ce ați ajuns la celula din dreapta jos, continuați mergând de la dreapta la stânga, 
+          începând din dreapta jos a tabelului prin fiecare rând și completați celulele non-diagonale 
+          numărând de la 1 la 16 cu numărul corespunzător. Așa cum se arată mai jos:
+        </p>
+        <table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:50%;margin:0.5em auto;">
+          <tbody><tr>
+          <td style="text-align: left; vertical-align: bottom;">
+          <table class="wikitable" style="margin-left:auto;margin-right:auto;text-align:center;width:8em;height:8em;table-layout:fixed;">
+          
+          <caption><i>M</i>= Ordinul 4
+          </caption>
+          <tbody><tr>
+          <td style="background-color: silver;">1</td>
+          <td></td>
+          <td></td>
+          <td style="background-color: silver;">4
+          </td></tr>
+          <tr>
+          <td></td>
+          <td style="background-color: silver;">6</td>
+          <td style="background-color: silver;">7</td>
+          <td>
+          </td></tr>
+          <tr>
+          <td></td>
+          <td style="background-color: silver;">10</td>
+          <td style="background-color: silver;">11</td>
+          <td>
+          </td></tr>
+          <tr>
+          <td style="background-color: silver;">13</td>
+          <td></td>
+          <td></td>
+          <td style="background-color: silver;">16
+          </td></tr></tbody></table>
+          </td>
+          <td style="text-align: left; vertical-align: bottom; padding-left: 1em;">
+          <table class="wikitable" style="margin-left:auto;margin-right:auto;text-align:center;width:8em;height:8em;table-layout:fixed;">
+          
+          <caption><i>M</i> = Ordinul 4
+          </caption>
+          <tbody><tr>
+          <td style="background-color: silver;">1</td>
+          <td>15</td>
+          <td>14</td>
+          <td style="background-color: silver;">4
+          </td></tr>
+          <tr>
+          <td>12</td>
+          <td style="background-color: silver;">6</td>
+          <td style="background-color: silver;">7</td>
+          <td>9
+          </td></tr>
+          <tr>
+          <td>8</td>
+          <td style="background-color: silver;">10</td>
+          <td style="background-color: silver;">11</td>
+          <td>5
+          </td></tr>
+          <tr>
+          <td style="background-color: silver;">13</td>
+          <td>3</td>
+          <td>2</td>
+          <td style="background-color: silver;">16
+          </td></tr></tbody></table>
+          </td></tr></tbody></table>
+        <p>Codul caracteristic acestei metode arată astfel :</p>
+        <pre>
+#include &lt;iostream&gt;
+using namespace std;
+int n,nr,a[101][101];
+int main()
+{
+    cin>>n;
+    for(int i=1;i&lt;=n;i++)
+        for(int j=1;j&lt;=n;j++)
+    {
+        nr++;
+        if((i%4==1||i%4==0)&&(j%4==1||j%4==0))a[i][j]=nr;
+        else if((i%4==2||i%4==3)&&(j%4==2||j%4==3))a[i][j]=nr;
+        else a[i][j]=n*n-nr+1;
+    }
+    for(int i=1; i&lt;=n; i++)
+    {
+        for(int j=1; j&lt;=n; j++) cout&lt;&lt;a[i][j]&lt;&lt; ' ';
+        cout&lt;&lt; '\n';
+    }
+    return 0;
+}
+        </pre>
+        <ul>
+          <li>
+            Pătratul de ordin 4*n se împarte în pătrate de ordin 4,iar variabila nr reprezintă numărul de ordine al celulei curente
+          </li>
+          <li>
+            Fiecare celula marcată în ordine crescătoare va avea proprietățile :<br>
+            - i = 4*k+1 sau i = 4*k și j = 4*k+1 sau j = 4*k , unde k={0,1,2....n/4}(celulă din colț)
+            <br>
+            <p>sau</p>
+            - i = 4*k+2 sau i = 4*k+3 și j = 4*k+2 sau j = 4*k+3 , unde k={0,1,2....n/4}(celulă centrală)
+          </li>
+          <li>
+            Se marchează restul celulelor cu numărul complementar lui nr, adică n*n-nr+1
+          </li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="main-section" id="patrat_4n+2">
+      <header>Construcția pătratului de ordin 4*n+2</header>
+      <article>
+        <p>Pentru a construi această clasă de pătrate magice se poate folosi metoda LUX.
+          Se bazează în parte pe metoda lui la Loubere, care se folosește în construcția pătratelor magice de ordin impar.
+          <br><br>
+          Astfel, pentru construcția unui patrat de ordinul 10 se va folosi urmatorul algoritm :
+          <br><br>
+          <strong>Pasul întâi:</strong> Regrupăm căsuțele în grupuri de 2x2, și le etichetăm pe fiecare în parte cu forma
+          următoare:<br>
+          -Pătratele din primele k+1 rânduri, unde k este împărțirea completă a mărimii pătratului în patru, sunt etichetate
+          cu litera L (3 rânduri în cazul acesta).<br>
+          -Pătratele rândului următor se etichetează cu litera U.<br>
+          -Pătratele rândurilor rămase se etichetează cu litera X.<br>
+          Aceste litere ne vor arăta pe urmă cum să umplem fiecare pătrat de 2x2.
+        </p>
+        <table align="center">
+    
+          <tbody>
+            <tr>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">U
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">U
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">U
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">U
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">U
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">X
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">X
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <p>
+          <strong>Pasul al doilea : </strong>Se schimbă pătratul U central cu pătratul L imediat superior.
+        </p>
+        <table align="center">
+    
+          <tbody>
+            <tr>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">U
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">U
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">U
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">U
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">U
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">X
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">X
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Pasul al treilea : </strong>Etichetăm fiecare pătrat de 2x2 cu un număr,
+          ghidându-ne după metoda lui la Loubere. Cu această formă indicăm în ce ordine se va umple fiecare subpătrat.</p>
+        <table border="0" align="center">
+    
+          <tbody>
+            <tr>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">17
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">24
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">1
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">8
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">15
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">23
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">5
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">7
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">14
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">16
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">4
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">6
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">13
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">20
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">22
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">U
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">L
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">10
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">12
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">19
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">21
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">3
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">U
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">U
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">L
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">U
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">U
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">11
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">18
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">25
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">2
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">9
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">X
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+              <td align="center" bgcolor="#66ffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#66ffff">X
+              </td>
+              <td align="center" bgcolor="#ccffff">&nbsp;&nbsp;&nbsp;
+              </td>
+              <td align="center" bgcolor="#ccffff">X
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Pasul al patrulea : </strong>Acum, subpătratului al i-lea îi corespund
+          numerele 4i-3, 4i-2, 4i-1 și 4i. De exemplu, subpătratului 10 îi corespund
+          numerele 37, 38, 39 și 40. Tot ce ne mai rămâne să știm este cum să plasăm
+          cele patru numere în subpătratul corespunzător, și aici intră în joc etichetetele LUX.
+        </p>
+        <table border="0" align="center">
+    
+          <tbody>
+            <tr>
+              <td align="center" bgcolor="#ccffff">al patrulea număr
+              </td>
+              <td align="center" bgcolor="#ccffff">primul număr
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">al doilea număr
+              </td>
+              <td align="center" bgcolor="#ccffff">al treilea număr
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="text-align:center">Subpătrat tip L</div>
+        <table border="0" align="center">
+    
+          <tbody>
+            <tr>
+              <td align="center" bgcolor="#ccffff">primul număr
+              </td>
+              <td align="center" bgcolor="#ccffff">al patrulea număr
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">al doilea număr
+              </td>
+              <td align="center" bgcolor="#ccffff">al treilea număr
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="text-align:center">Subpătrat tip U</div>
+        <table border="0" align="center">
+    
+          <tbody>
+            <tr>
+              <td align="center" bgcolor="#ccffff">primul număr
+              </td>
+              <td align="center" bgcolor="#ccffff">al patrulea număr
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">al treilea număr
+              </td>
+              <td align="center" bgcolor="#ccffff">al doilea număr
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="text-align:center">Subpătrat tip X</div>
+        <p>După cum se poate vedea, literele ne spun forma pe care o
+          iau numerele așezându-se în fiecare subpătrat. Cu toate acesete
+          elemente se poate construi pătratul.</p>
+        <table border="0" align="center">
+    
+          <tbody>
+            <tr>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">68
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">65
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">96
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">93
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">4
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">1
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">32
+              </td>
+              <td align="center" bgcolor="#66ffff" style="width:1.5em">29
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">60
+              </td>
+              <td align="center" bgcolor="#ccffff" style="width:1.5em">57
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">66
+              </td>
+              <td align="center" bgcolor="#ccffff">67
+              </td>
+              <td align="center" bgcolor="#66ffff">94
+              </td>
+              <td align="center" bgcolor="#66ffff">95
+              </td>
+              <td align="center" bgcolor="#ccffff">2
+              </td>
+              <td align="center" bgcolor="#ccffff">3
+              </td>
+              <td align="center" bgcolor="#66ffff">30
+              </td>
+              <td align="center" bgcolor="#66ffff">31
+              </td>
+              <td align="center" bgcolor="#ccffff">58
+              </td>
+              <td align="center" bgcolor="#ccffff">59
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">92
+              </td>
+              <td align="center" bgcolor="#66ffff">89
+              </td>
+              <td align="center" bgcolor="#ccffff">20
+              </td>
+              <td align="center" bgcolor="#ccffff">17
+              </td>
+              <td align="center" bgcolor="#66ffff">28
+              </td>
+              <td align="center" bgcolor="#66ffff">25
+              </td>
+              <td align="center" bgcolor="#ccffff">56
+              </td>
+              <td align="center" bgcolor="#ccffff">53
+              </td>
+              <td align="center" bgcolor="#66ffff">64
+              </td>
+              <td align="center" bgcolor="#66ffff">61
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">90
+              </td>
+              <td align="center" bgcolor="#66ffff">91
+              </td>
+              <td align="center" bgcolor="#ccffff">18
+              </td>
+              <td align="center" bgcolor="#ccffff">19
+              </td>
+              <td align="center" bgcolor="#66ffff">26
+              </td>
+              <td align="center" bgcolor="#66ffff">27
+              </td>
+              <td align="center" bgcolor="#ccffff">54
+              </td>
+              <td align="center" bgcolor="#ccffff">55
+              </td>
+              <td align="center" bgcolor="#66ffff">62
+              </td>
+              <td align="center" bgcolor="#66ffff">63
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">16
+              </td>
+              <td align="center" bgcolor="#ccffff">13
+              </td>
+              <td align="center" bgcolor="#66ffff">24
+              </td>
+              <td align="center" bgcolor="#66ffff">21
+              </td>
+              <td align="center" bgcolor="#ccffff">49
+              </td>
+              <td align="center" bgcolor="#ccffff">52
+              </td>
+              <td align="center" bgcolor="#66ffff">80
+              </td>
+              <td align="center" bgcolor="#66ffff">77
+              </td>
+              <td align="center" bgcolor="#ccffff">88
+              </td>
+              <td align="center" bgcolor="#ccffff">85
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">14
+              </td>
+              <td align="center" bgcolor="#ccffff">15
+              </td>
+              <td align="center" bgcolor="#66ffff">22
+              </td>
+              <td align="center" bgcolor="#66ffff">23
+              </td>
+              <td align="center" bgcolor="#ccffff">50
+              </td>
+              <td align="center" bgcolor="#ccffff">51
+              </td>
+              <td align="center" bgcolor="#66ffff">78
+              </td>
+              <td align="center" bgcolor="#66ffff">79
+              </td>
+              <td align="center" bgcolor="#ccffff">86
+              </td>
+              <td align="center" bgcolor="#ccffff">87
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">37
+              </td>
+              <td align="center" bgcolor="#66ffff">40
+              </td>
+              <td align="center" bgcolor="#ccffff">45
+              </td>
+              <td align="center" bgcolor="#ccffff">48
+              </td>
+              <td align="center" bgcolor="#66ffff">76
+              </td>
+              <td align="center" bgcolor="#66ffff">73
+              </td>
+              <td align="center" bgcolor="#ccffff">81
+              </td>
+              <td align="center" bgcolor="#ccffff">84
+              </td>
+              <td align="center" bgcolor="#66ffff">9
+              </td>
+              <td align="center" bgcolor="#66ffff">12
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#66ffff">38
+              </td>
+              <td align="center" bgcolor="#66ffff">39
+              </td>
+              <td align="center" bgcolor="#ccffff">46
+              </td>
+              <td align="center" bgcolor="#ccffff">47
+              </td>
+              <td align="center" bgcolor="#66ffff">74
+              </td>
+              <td align="center" bgcolor="#66ffff">75
+              </td>
+              <td align="center" bgcolor="#ccffff">82
+              </td>
+              <td align="center" bgcolor="#ccffff">83
+              </td>
+              <td align="center" bgcolor="#66ffff">10
+              </td>
+              <td align="center" bgcolor="#66ffff">11
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">41
+              </td>
+              <td align="center" bgcolor="#ccffff">44
+              </td>
+              <td align="center" bgcolor="#66ffff">69
+              </td>
+              <td align="center" bgcolor="#66ffff">72
+              </td>
+              <td align="center" bgcolor="#ccffff">97
+              </td>
+              <td align="center" bgcolor="#ccffff">100
+              </td>
+              <td align="center" bgcolor="#66ffff">5
+              </td>
+              <td align="center" bgcolor="#66ffff">8
+              </td>
+              <td align="center" bgcolor="#ccffff">33
+              </td>
+              <td align="center" bgcolor="#ccffff">36
+              </td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#ccffff">43
+              </td>
+              <td align="center" bgcolor="#ccffff">42
+              </td>
+              <td align="center" bgcolor="#66ffff">71
+              </td>
+              <td align="center" bgcolor="#66ffff">70
+              </td>
+              <td align="center" bgcolor="#ccffff">99
+              </td>
+              <td align="center" bgcolor="#ccffff">98
+              </td>
+              <td align="center" bgcolor="#66ffff">7
+              </td>
+              <td align="center" bgcolor="#66ffff">6
+              </td>
+              <td align="center" bgcolor="#ccffff">35
+              </td>
+              <td align="center" bgcolor="#ccffff">34
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Algoritmul C++ corespunzător acestei metode este :</p>
+        <pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int n;
+int a[101][101];
+void gen_impar(int n,int a[][101]){
+
+    int nr=0;
+    for(int i=0,j=n/2+1,d=1;d&lt;=n;d++)
+    {   a[++i][j]=++nr;
+        for(int k=1;k&lt;n;k++)
+        {   i--;
+            if(i==0) i=n;
+            j++;
+            if(j==n+1) j=1;
+            a[i][j]=++nr;
+        }
+    }
+}
+
+int main()
+{
+    int b[101][101];
+    cin&gt;&gt;n;
+    gen_impar(n/2, b);
+    /// generam matricea tip
+    char tip[51][51];
+    int k = (n-2)/4;
+    for(int i=1;i&lt;=k+1;++i)
+        for(int j=1;j&lt;=n/2;++j)
+            tip[i][j] = 'L';
+    for(int j=1;j&lt;=n/2;++j)
+        tip[k+2][j] = 'U';
+    for(int i=k+3;i&lt;=n/2;++i)
+        for(int j=1;j&lt;=n/2;++j)
+            tip[i][j] = 'X';
+    swap(tip[k+1][k+1], tip[k+2][k+1]);
+    /// generam matricea rezultat
+    for(int i=1, x=1;i&lt;=n;i+=2, ++x)
+        for(int j=1, y=1;j&lt;=n;j+=2, ++y)
+    {
+        if(tip[x][y] == 'L')
+        {
+            a[i][j] = 4*b[x][y];
+            a[i+1][j+1] = 4*b[x][y]-1;
+            a[i+1][j] = 4*b[x][y]-2;
+            a[i][j+1] = 4*b[x][y]-3;
+        }
+        else if(tip[x][y] == 'U')
+        {
+            a[i][j] = 4*b[x][y]-3;
+            a[i+1][j+1] = 4*b[x][y]-1;
+            a[i+1][j] = 4*b[x][y]-2;
+            a[i][j+1] = 4*b[x][y];
+        }
+        else if(tip[x][y] == 'X')
+        {
+            a[i][j] = 4*b[x][y]-3;
+            a[i+1][j+1] = 4*b[x][y]-2;
+            a[i+1][j] = 4*b[x][y]-1;
+            a[i][j+1] = 4*b[x][y];
+        }
+    }
+    for(int i=1;i&lt;=n;++i, cout&lt;&lt;'\n')
+        for(int j=1;j&lt;=n;++j)
+            cout&lt;&lt;a[i][j]&lt;&lt;' ';
+    return 0;
+}
+        </pre>
+        <ul>
+          <li>
+            Matricea <strong>tip</strong> va reține tipul fiecărei diviziuni de 2x2 din matricea inițială(pasul 1 si 2)
+          </li>
+          <li>
+            Functia <strong>gen_impar</strong> va genera în <strong>matricea b</strong> numărul fiecarui subpătrat(pasul 3)
+          </li>
+          <li>
+            La sfarsit, vom popula matricea rezultat(<strong>matricea a</strong>) în funcție de fiecare tip de subpătrat(pasul 4)
+          </li>
+
+        </ul>
+      </article>
+    </div>
+    
+    <div class="main-section" id="Reference">
+      <header>Bibliografie</header>
+      <article>
+        <ul>
+          <li>
+    
+            <a href="https://ro.wikipedia.org/wiki/P%C4%83trat_magic">Pătrat magic (Wikipedia)</a>
+          </li>
+          <li>
+    
+            <a href="https://en.wikipedia.org/wiki/Magic_square">Magic square(Wikipedia)</a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Conway%27s_LUX_method_for_magic_squares">Conway's LUX method for magic squares(Wikipedia)</a>
+          </li>
+        </ul>
+      </article>
+    </div>
+    </main>
+    </body>
