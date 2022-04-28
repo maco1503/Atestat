@@ -74,11 +74,6 @@ pre {
   border-radius: 10px;
   
 }
-#elev{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 #ph_text,#photos{
   display: flex;
   flex-direction: row;
